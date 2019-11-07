@@ -44,19 +44,19 @@ Hay una _inversión del control_: en lugar de ser nosotras/os quienes decidimos 
 
 Recordemos que en JavaScript, las funciones son lo que llamamos [First-Class citizens](https://github.com/undefinedschool/notes-functions-first-class/) y esto nos permite tratarlas como cualquier otro valor, lo que incluye pasarlas por parámetro a otra función (y que esto a su vez es posible porque en JavaScript las funciones son _higher order functions_).
 
-Entonces,
-
-1. Le pasamos una función (_callback_) `C` por parámetro a otra función `F`
-2. La función _callback_ `C` es invocada por `F`, cuando ocurra algún evento determinado
+En el siguiente ejemplo, le pasamos una función (_callback_) `myCallback` por parámetro a otra función `foo`. La función _callback_ luego es invocada por `foo`
 
 ```js
-function C() {
- // do smth
+// caller
+function foo(callback) {
+  callback('world');
 }
 
-function F(callback) {
-  if (event) {
-    callback();
-  }
+// callback function
+function myCallback(name) {
+  console.log(`Hello ${name}`); // "hello world"
 }
+
+// pass callback to caller
+foo(myCallback);
 ```
