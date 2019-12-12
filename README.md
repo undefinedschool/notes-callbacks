@@ -60,3 +60,6 @@ function myCallback(name) {
 // pass callback to caller
 foo(myCallback);
 ```
+
+- Un _callback_ es sólo una forma de guardar cosas para hacer más tarde
+- El orden en el que las cosas suceden no es lineal ni de arriba hacia abajo: va cambiando a medida que otras tareas se completan
