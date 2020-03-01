@@ -1,16 +1,29 @@
-# Callbacks (WIP)
+# ![](https://i.imgur.com/OWN6Zng.png)
+
+## Notas sobre Asincronismo en JS
+
+- [Callbacks](https://github.com/undefinedschool/notes-callbacks)
+- [ES6: Promises](https://github.com/undefinedschool/notes-es6-promises)
+- [ES2017: Async/Await](https://github.com/undefinedschool/notes-es2017-async-await)
+- [Event Loop](https://github.com/undefinedschool/notes-event-loop)
+
+## Contenido
+
+---
+
+## Intro
 
 - La mayor parte del código que escribimos se ejecuta _secuencialmente_. Llamamos a esto _**programación sincrónica**_
 - A veces es beneficioso que el código se ejecute luego de que suceda algo determinado (un _evento_) y no secuencialmente. Llamamos a esto _**programación asincrónica**_
 
 Los _callbacks_ nos permiten programar de forma _asincrónica_
 
-## JS Async
+## JS Asincrónico
 
 - En un lenguaje _single-thread_, sólo una tarea puede ejecutarse a la vez
 - Una tarea pasa a ejecutarse _sólo_ si la anterior fue completada (ej: esperar a que una función termine de ejecutarse y retorne el resultado)
 - Si una operación tarda mucho en finalizar, _bloquea_ la ejecución del resto del programa (si tarda poco también, pero obviamente es más difícil de percibir)
-- La ejecución _asincrónica_ de código nos permite esquivar este cuello de botella, al _delegar o poner en segundo plano_ una tarea, para que podamos continuar con la ejecución del resto, sin esperar a que la anterior finalice y obtener el resultado de la primera cuando finalice, para poder utilizarlo
+- La ejecución _asincrónica_ de código nos permite esquivar este cuello de botella, al _delegar o poner en segundo plano_<sup id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> una tarea, para que podamos continuar con la ejecución del resto, sin esperar a que la anterior finalice y obtener el resultado de la primera cuando finalice, para poder utilizarlo
 
 ```js
 const sync = () => {
@@ -63,3 +76,7 @@ foo(myCallback);
 
 - Un _callback_ es sólo una forma de guardar cosas para hacer más tarde
 - El orden en el que las cosas suceden no es lineal ni de arriba hacia abajo: va cambiando a medida que otras tareas se completan
+
+---
+
+<sup id="cite_note-1"><a href="#cite_ref-1">1</a></sup>Ver notas sobre el [_Event Loop_](https://github.com/undefinedschool/notes-event-loop).
