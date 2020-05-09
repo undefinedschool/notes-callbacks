@@ -22,13 +22,7 @@
   <hr>
 </div>
 
-## Notas relacionadas
-
-### `async`
-
-- [**ES6: Promises**](https://github.com/undefinedschool/notes-es6-promises)
-- [**ES2017: Async/Await**](https://github.com/undefinedschool/notes-es2017-async-await)
-- [**Event Loop**](https://github.com/undefinedschool/notes-event-loop)
+> 👉 Ver [todas las notas](https://github.com/undefinedschool/notes)
 
 ## Contenido
 
